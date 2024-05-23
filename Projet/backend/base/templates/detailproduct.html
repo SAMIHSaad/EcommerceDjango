@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} Nos produits {% endblock %}
+
+{% block content %}
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-4">
+            <img src="{{ produit.image.url }}" alt="">
+        </div>
+        <div class="col-4">
+            <div class="list-group">
+                <h3 class="list-group-item">{{produit.name}}</h3>
+                <p class="list-group-item">{{produit.description}}</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col">Prix:</div>
+                        <div class="col">{{produit.price}}</div>
+                    </div>
+                </div>
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col">Statut:</div>
+                        <div class="col">{{produit.countInStock}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="d-flex justify-content-center">
+                    <a class="btn btn-dark" href="{% url 'product_list' %}">Retour</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

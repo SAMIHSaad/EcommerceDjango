@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title%} Accueil {% endblock %}
+{% block content %}
+    <div class="container">
+        <h1>Bienvenue sur E-Vente </h1>
+        Nous mettons à votre disposition une large catégorie de produits
+        <hr>
+        voulez vous découvrir nos produits 
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'product_list' %}">Voir nos produits </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
